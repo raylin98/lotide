@@ -20,21 +20,17 @@ const eqObjects = function(object1, object2) {
     return false;
   } else {
     for (let keys in object1) {
-      // create a statement that checks if given object is an array
+      // create a statement that checks if given object is an array, if array is false, returns false
       if (Array.isArray(object1[keys]) && Array.isArray(object2[keys])) {
-        // if array is passed, check if the lengths are equal
-        if (object1[keys].length === object2[keys].length) {
-          // if equal in length, utilize eqArray function to check if obj 1 and obj 2 are equal or not, if not, returns the value false
-          eqArrays(object1[keys], object2[keys]);
-        } else {
+        if (!eqArrays(object1[keys]), object2[keys]) {
           return false;
         }
-      } else if (object1[keys] === object2[keys]) {
-        continue;
-      } else {
+      // checks if arrays are equal
+      } else if (object1[keys] !== object2[keys]){
         return false;
       }
-    } return true;
+    } 
+    return true;
   }
 };
 
