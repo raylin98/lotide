@@ -22,7 +22,7 @@ const eqObjects = function(object1, object2) {
     for (let keys in object1) {
       // create a statement that checks if given object is an array, if array is false, returns false
       if (Array.isArray(object1[keys]) && Array.isArray(object2[keys])) {
-        if (!eqArrays(object1[keys]), object2[keys]) {
+        if (!eqArrays(object1[keys], object2[keys])) {
           return false;
         }
       // checks if arrays are equal
