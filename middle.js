@@ -1,21 +1,3 @@
-const eqArrays = function(array1, array2) {
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  } return true;
-};
-
-const assertArraysEqual = function(arra1,arra2) {
-  if (eqArrays(arra1,arra2) === true) {
-    console.log('Arrays are the same');
-  } else {
-    console.log('The arrays are not the same');
-  }
-};
-
-
-
 const middle = function(array) {
 //variable for calculations to find the middle of the array
   let middleArray = Math.floor(array.length / 2);
@@ -31,7 +13,4 @@ const middle = function(array) {
   }
 };
 
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-console.log(middle([1,2,3,4,5,6])); // => [3,4]
-console.log(middle([1,2,3,4,5,6,7,8])); // => [4,5]
+module.exports = middle;
