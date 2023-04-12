@@ -1,13 +1,15 @@
-const assertEqual = require(`../assertEqual`);
+const assert = require('chai').assert
 
 const tail = require(`../tail.js`);
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 
-tail(words);
-assertEqual(words.length, 3);
-/*tests*/
-assertEqual(words.length, 2);
-assertEqual(words[0], "Yo Yo");
-assertEqual(words[0], "Labs");
-assertEqual(words[2],"Lighthouse")
+describe("#tail", () => {
+  it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ['Lighthouse', 'Labs']);
+  });
+
+  it("returns '3' for ['Yo Yo', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(words.length, 3);
+  });
+});
