@@ -14,7 +14,7 @@ const takeUntil = function(array, callback) {
   return results;
 };
 
-module.exports = takeUntil.js
+module.exports = takeUntil
 
 /*
 //Test code
