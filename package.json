@@ -1,0 +1,26 @@
+{
+  "name": "@raylin98/lotide",
+  "version": "1.0.0",
+  "description": "A clone of lodash JavaScript library to practice creating different types of functions using JavaScript",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raylin98/lotide.git"
+  },
+  "author": "Raymond Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raylin98/lotide/issues"
+  },
+  "homepage": "https://github.com/raylin98/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
+  }
+}

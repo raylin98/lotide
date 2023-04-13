@@ -47,3 +47,5 @@ const ef = {
 };
 
 assertObjectsEqual(ab,ef);
+
+module.exports = assertObjectsEqual
