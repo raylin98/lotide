@@ -1,18 +1,6 @@
-const eqArrays = function(array1, array2) {
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  } return true;
-};
+const eqArrays = require('./eqArrays');
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertation passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertation failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const eqObjects = function(object1, object2) {
   // first make a statement that checks the lenght of the object length if it isn't equal stop the function and return false
@@ -34,6 +22,8 @@ const eqObjects = function(object1, object2) {
   }
 };
 
+module.exports = eqObjects
+/*
 const shirtObject = {
   color : "red",
   size : "medium" };
@@ -76,4 +66,4 @@ const test4 = {
 
 console.log(eqObjects(test3 ,test4));
 assertEqual(eqObjects(test3, test4), true);
-
+*/
